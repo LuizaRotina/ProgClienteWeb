@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		OMG
+	</title>
+	<script>
+		function n_primo(n){
+			var n= document.getElementById("numero").value;
+			var i,x=0;
+			for(i=1;i<=n;i++)
+			{
+				if(n%i==0)
+					x++;
+			}
+			if(x==2)
+				var resposta = "O número é primo";
+			else
+				var resposta = "Número não primo";
+				document.getElementById("result").innerHTML = resposta;
+				return x;		
+		}
+	</script>
+</head>
+<body>
+	<h1 id="result"></h1>
+		<input type="number" id="numero">
+		<button onclick="javascript:n_primo()">Executar</button>
+</body>
+</html>
